@@ -1,0 +1,102 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  font-size: 62.5%;
+
+  --bg_buttonThemes_pressed:#02799D;
+  --bt_themes_pressed:#FFFFFF;
+}
+
+body{
+  font-size: 1.6rem;
+}
+
+.page{
+  display: grid;
+  grid-template-areas: "1 1" "2 2";
+  place-content: center;
+  height: 100vh;
+}
+
+button{
+  border-style: none;
+  background: white
+}
+
+.timer{
+  font-family: 'Roboto';
+  font-size: 12.6rem;
+  line-height: 14.8rem;
+  color: #323238;
+
+  display: flex;
+  margin-top: 5.8rem;
+  margin-right: clamp(3rem, 3rem + 10vw, 19.2rem);
+  text-align: center;
+}
+
+.buttons_timer{
+  display: flex;
+  gap: 4rem;
+}
+
+.themes{
+  display: grid;
+  grid-template-areas:"A B"
+  "C D";
+
+  gap: 3.2rem;
+}
+
+#florest{
+  grid-area: A;
+}
+#rain{
+  grid-area: B;
+}
+#coffee_shop{
+  grid-area: C;
+}
+#fireplace{
+  grid-area: D;
+}
+
+button:hover{
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.themeButton_Pressed svg path:nth-child(1){
+  fill: var(--bg_buttonThemes_pressed);
+}
+.themeButton_Pressed svg path:nth-child(2){
+  fill: var(--bt_themes_pressed);
+}
+
+.hide{
+display: none;
+}
+
+@media (max-width: 800px){
+  .page{
+    grid-template-areas: "1"
+    "2";
+
+    gap: clamp(3rem, 3rem + 10vw, 19.2rem);
+  }
+
+  .display{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .timer{
+    display: flex;
+    margin: auto;
+  }
+}
