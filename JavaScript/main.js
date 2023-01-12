@@ -15,6 +15,10 @@ const buttonRain = document.querySelector("#rain")
 const buttonCoffee_Shop = document.querySelector("#coffee_shop")
 const buttonFireplace = document.querySelector("#fireplace")
 
+const mainPage = document.querySelector(".page")
+const light_Icon = document.querySelector(".light_Icon")
+const dark_Icon = document.querySelector(".dark_Icon")
+
 let timerTimeout;
 let minutes = Number(minutesDisplay.textContent)
 
@@ -99,4 +103,20 @@ buttonCoffee_Shop.addEventListener("click", () => {
 buttonFireplace.addEventListener("click", () => {
   togglePlay(sound.fireplace)
   buttonFireplace.classList.toggle("themeButton_Pressed")
+})
+
+light_Icon.addEventListener("click", () => {
+  light_Icon.classList.toggle("hide")
+  dark_Icon.classList.toggle("hide")
+
+  mainPage.classList.remove("lightmode")
+  mainPage.classList.add("darkmode")
+})
+
+dark_Icon.addEventListener("click", () => {
+  light_Icon.classList.toggle("hide")
+  dark_Icon.classList.toggle("hide")
+
+  mainPage.classList.remove("darkmode")
+  mainPage.classList.add("lightmode")
 })

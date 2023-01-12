@@ -1,5 +1,3 @@
-/* COMENTARIO */
-
 *{
   margin: 0;
   padding: 0;
@@ -17,6 +15,38 @@ body{
   font-size: 1.6rem;
 }
 
+.icons{
+  position: absolute;
+  top: 6.4rem;
+  right: 6.4rem;
+}
+
+.darkmode{
+  background: #121214;
+}
+.darkmode .timer{
+  color: white;
+}
+.darkmode .buttons_timer svg path{
+  fill: #C4C4CC;
+}
+.darkmode .themes svg path:nth-child(1){
+  fill: #29292E;
+}
+.darkmode .themes svg path:nth-child(2){
+  fill: #C4C4CC;
+}
+.darkmode .themeButton_Pressed svg path:nth-child(1){
+  fill: #0A3442;
+}
+.darkmode .themeButton_Pressed svg path:nth-child(2){
+  fill: white;
+}
+
+.lightmode{
+  background: white;
+}
+
 .page{
   display: grid;
   grid-template-areas: "1 1" "2 2";
@@ -26,7 +56,7 @@ body{
 
 button{
   border-style: none;
-  background: white
+  background: none;
 }
 
 .timer{
